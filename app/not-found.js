@@ -5,27 +5,25 @@ import SidebarWithoutMenu from "./components/SidebarWithoutMenu"
 export default function NotFound() {
   return (
     <>
-      <div className="container">
-        <main className="flex">
-          <section className="h-screen w-1/4 bg-gray-300 py-8 scroll-smooth overflow-auto">
-            <SidebarWithoutMenu />
-          </section>
+      <main className="flex">
+        <section className="h-full absolute left-0 top-0 lg:static hidden lg:block z-30 w-full lg:w-1/4 bg-gray-50 scroll-smooth overflow-auto">
+          <SidebarWithoutMenu />
+        </section>
 
-          <section className="h-screen w-3/4 flex flex-col items-center justify-center space-y-4">
-            <h3 className="text-4xl font-bold">404</h3>
-            <h3 className="text-base text-center">
-              The page you're looking for <br /> isn't currently available.
-            </h3>
+        <section className="h-screen w-full lg:w-3/4 flex flex-col items-center justify-center space-y-4">
+          <h3 className="text-4xl font-bold">404</h3>
+          <h3 className="text-base text-center">
+            The page you're looking for <br /> isn't currently available.
+          </h3>
 
-            <div className="text-center text-base">
-              Go To{" "}
-              <Link href="/" className="font-semibold underline">
-                Home
-              </Link>
-            </div>
-          </section>
-        </main>
-      </div>
+          <div className="text-center text-base">
+            Go To{" "}
+            <Link href="/" className="font-semibold underline">
+              Home
+            </Link>
+          </div>
+        </section>
+      </main>
     </>
   )
 }
