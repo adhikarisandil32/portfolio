@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <main className="flex">
-        <section className="h-full absolute left-0 top-0 lg:static hidden lg:block z-30 w-full lg:w-1/4 bg-gray-50 scroll-smooth overflow-auto">
+        <section className="h-full py-8 absolute left-0 top-0 lg:static hidden lg:block z-30 w-full lg:w-1/4 bg-gray-50 scroll-smooth overflow-auto">
           <SidebarWithoutMenu />
         </section>
 
