@@ -15,7 +15,7 @@ export default function ContactSection({ providedRef }) {
           </div>
 
           <div className="flex md:flex-row flex-col gap-8">
-            <div className="md:w-1/2 space-y-4">
+            <div className="md:w-1/2 space-y-4 md:mt-8">
               <div className="flex gap-4 items-center">
                 <p className="p-4 h-16 w-16 flex items-center justify-center rounded-full border-2 border-[#29375f]">
                   <FontAwesomeIcon icon={faLinkedin} className="fa-fw text-[#0072b1] text-3xl" />
