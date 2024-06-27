@@ -7,7 +7,10 @@ export default function ProjectBox({ projectInfo }) {
     <>
       <Card>
         <CardHeader>
-          <CardImage src={projectInfo.imageUrl} />
+          <Link target="_blank" href={projectInfo.deployedLink ?? projectInfo.codeLink}>
+            <CardImage src={projectInfo.imageUrl} />
+          </Link>
+
           <CardTitle>{projectInfo.title}</CardTitle>
         </CardHeader>
 
