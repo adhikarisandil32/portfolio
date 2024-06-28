@@ -20,13 +20,32 @@ export default function Home() {
   const contactRef = useRef()
   const wholeSidebarRef = useRef()
 
+  const [activeLink, setActiveLink] = useState()
+
   useEffect(() => {
+    // to scroll screen into view based on the hash link
     const refsCollection = [homeRef, aboutRef, projectsRef, educationRef, contactRef]
     const idToScrollTo = window.location.hash?.split("#")[1] ?? "home"
 
     const requestedSectionRef = refsCollection.filter((eachRef) => eachRef.current?.id === idToScrollTo)[0]
 
     if (requestedSectionRef) requestedSectionRef.current.scrollIntoView({ behavior: "smooth" })
+
+    // handle active link change based on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveLink(`#${entry.target.id}`)
+          }
+        })
+      },
+      { threshold: 1 }
+    )
+
+    refsCollection.forEach((eachRef) => {
+      observer.observe(eachRef.current)
+    })
   }, [])
 
   return (
@@ -48,7 +67,7 @@ export default function Home() {
           </div>
 
           <div className="py-8">
-            <Sidebar />
+            <Sidebar activeLink={activeLink} />
           </div>
         </section>
 
