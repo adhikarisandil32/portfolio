@@ -83,7 +83,7 @@ export default function ContactForm() {
           <input
             type="text"
             className="w-full outline-none border-b-2 border-black bg-transparent"
-            placeholder="Enter Your Email"
+            placeholder="Subject of Conversation"
             {...register("subject", {
               required: "Subject field empty",
               maxLength: {
