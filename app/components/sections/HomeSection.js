@@ -9,7 +9,11 @@ import Link from "next/link"
 
 export default function HomeSection({ providedRef }) {
   return (
-    <div className="bg-radial" id="home" ref={providedRef}>
+    <div
+      className="bg-radial"
+      id="home"
+      ref={providedRef}
+    >
       <div className="container">
         <div className="p-4 relative h-screen flex items-center">
           <div className="relative w-full space-y-10 z-10">
@@ -22,11 +26,21 @@ export default function HomeSection({ providedRef }) {
 
             <div className="space-x-4 lg:text-left text-center">
               <Link href="#projects">
-                <Button text="My Projects" className="primary-button" />
+                <Button
+                  text="My Projects"
+                  className="primary-button"
+                />
               </Link>
 
-              <Link href="/CV/CV.pdf" target="_blank">
-                <Button text="Download CV" className="secondary-button" icon={<FontAwesomeIcon icon={faDownLong} />} />
+              <Link
+                href="/CV/SandilAdhikari_CV.pdf"
+                target="_blank"
+              >
+                <Button
+                  text="Download CV"
+                  className="secondary-button"
+                  icon={<FontAwesomeIcon icon={faDownLong} />}
+                />
               </Link>
             </div>
           </div>
