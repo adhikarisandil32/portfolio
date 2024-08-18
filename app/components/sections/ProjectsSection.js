@@ -4,6 +4,13 @@ import ShowProjects from "../ProjectBox/ShowProjects"
 export default function ProjectsSection({ providedRef }) {
   const projectsFrontend = [
     {
+      title: "Global Connection & Networking Society",
+      codeLink: "https://github.com/adhikarisandil32/gdes",
+      deployedLink: "https://gcns.vercel.app/",
+      imageUrl: "/project-images/gcns.png",
+      librariesUsed: ["Vanilla HTML", "Vanilla JS", "SCSS"],
+    },
+    {
       title: "Online Store - JavaScript",
       codeLink: "https://github.com/adhikarisandil32/onlinestore-sealthedeal",
       deployedLink: "https://onlinestore-sealthedeal.netlify.app/",
@@ -50,14 +57,21 @@ export default function ProjectsSection({ providedRef }) {
   ]
 
   return (
-    <div className="bg-gray-50" id="projects" ref={providedRef}>
+    <div
+      className="bg-gray-50"
+      id="projects"
+      ref={providedRef}
+    >
       <div className="container">
         <div className="px-4 py-8 space-y-8">
           <div>
             <span className="text-xs tracking-widest">MY PROJECTS</span>
           </div>
 
-          <ShowProjects frontendProjects={projectsFrontend} backendProjects={projectsBackend} />
+          <ShowProjects
+            frontendProjects={projectsFrontend}
+            backendProjects={projectsBackend}
+          />
         </div>
       </div>
     </div>
