@@ -9,8 +9,6 @@ import HomeSection from "./components/sections/HomeSection"
 import ProjectsSection from "./components/sections/ProjectsSection"
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import resolveConfig from "tailwindcss/resolveConfig"
-import tailwindConfig from "@/tailwind.config.js"
 
 export default function Home() {
   const homeRef = useRef()
@@ -52,7 +50,7 @@ export default function Home() {
     <>
       <main className="flex h-screen">
         <section
-          className="h-full absolute left-0 top-0 lg:static lg:block z-30 w-full lg:w-1/4 bg-gray-50 scroll-smooth overflow-auto"
+          className="h-full absolute left-0 top-0 lg:static hidden lg:block z-30 w-full lg:w-1/4 bg-gray-50 scroll-smooth overflow-auto"
           ref={wholeSidebarRef}
         >
           <div className="text-right lg:hidden">
@@ -67,7 +65,10 @@ export default function Home() {
           </div>
 
           <div className="py-8">
-            <Sidebar activeLink={activeLink} />
+            <Sidebar
+              activeLink={activeLink}
+              wholeSidebarRef={wholeSidebarRef}
+            />
           </div>
         </section>
 

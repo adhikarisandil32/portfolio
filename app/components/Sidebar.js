@@ -2,7 +2,7 @@ import Image from "next/image"
 import React from "react"
 import Menu from "./Menu"
 
-export default function Sidebar({ activeLink }) {
+export default function Sidebar({ activeLink, wholeSidebarRef }) {
   return (
     <div className="h-full">
       <div className="space-y-8 justify-center">
@@ -23,7 +23,10 @@ export default function Sidebar({ activeLink }) {
           </h2>
         </div>
 
-        <Menu activeLink={activeLink} />
+        <Menu
+          activeLink={activeLink}
+          wholeSidebarRef={wholeSidebarRef}
+        />
 
         <div className="text-center">
           <span>© Copyright 2024. All rights reserved.</span>
