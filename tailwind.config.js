@@ -5,7 +5,7 @@ module.exports = {
   prefix: "",
   theme: {
     screens: {
-      xs: "400px",
+      xs: "360px",
       sm: "580px",
       md: "768px",
       lg: "1024px",
@@ -14,7 +14,7 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        xs: "400px",
+        xs: "360px",
         sm: "580px",
         md: "768px",
         lg: "1024px",
