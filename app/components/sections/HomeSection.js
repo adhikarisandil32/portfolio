@@ -33,8 +33,9 @@ export default function HomeSection({ providedRef }) {
               </Link>
 
               <Link
-                href="/CV/SandilAdhikari_CV.pdf"
+                href="/CV/SandilAdhikari_JavaScript_CV.pdf"
                 target="_blank"
+                download
               >
                 <Button
                   text="Download CV"
