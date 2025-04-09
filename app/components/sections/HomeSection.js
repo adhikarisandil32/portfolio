@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import React from "react"
-import Button from "../buttons/Button"
-import Image from "next/image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faDownLong } from "@fortawesome/free-solid-svg-icons"
-import Link from "next/link"
+import React from "react";
+import Button from "../buttons/Button";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownLong } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function HomeSection({ providedRef }) {
   return (
@@ -59,5 +59,5 @@ export default function HomeSection({ providedRef }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
