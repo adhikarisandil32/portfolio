@@ -1,9 +1,9 @@
-import React from "react"
-import ContactForm from "../Forms/ContactForm"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import Link from "next/link"
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import ContactForm from "../forms/contact-form";
 
 export default function ContactSection({ providedRef }) {
   return (
@@ -81,5 +81,5 @@ export default function ContactSection({ providedRef }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
