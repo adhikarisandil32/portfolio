@@ -1,6 +1,6 @@
-import Image from "next/image"
-import React from "react"
-import Menu from "./Menu"
+import Image from "next/image";
+import React from "react";
+import Menu from "./menu";
 
 export default function Sidebar({ activeLink, wholeSidebarRef }) {
   return (
@@ -33,5 +33,5 @@ export default function Sidebar({ activeLink, wholeSidebarRef }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

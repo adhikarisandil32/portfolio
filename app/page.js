@@ -1,50 +1,50 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import Sidebar from "./components/Sidebar"
-import AboutSection from "./components/sections/AboutSection"
-import ContactSection from "./components/sections/ContactSection"
-import EducationSection from "./components/sections/EducationSection"
-import HomeSection from "./components/sections/HomeSection"
-import ProjectsSection from "./components/sections/ProjectsSection"
-import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useEffect, useRef, useState } from "react";
+import Sidebar from "./components/sidebar";
+import AboutSection from "./components/sections/about-section";
+import ContactSection from "./components/sections/contact-section";
+import EducationSection from "./components/sections/education-section";
+import HomeSection from "./components/sections/home-section";
+import ProjectsSection from "./components/sections/projects-section";
+import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
-  const homeRef = useRef()
-  const aboutRef = useRef()
-  const projectsRef = useRef()
-  const educationRef = useRef()
-  const contactRef = useRef()
-  const wholeSidebarRef = useRef()
+  const homeRef = useRef();
+  const aboutRef = useRef();
+  const projectsRef = useRef();
+  const educationRef = useRef();
+  const contactRef = useRef();
+  const wholeSidebarRef = useRef();
 
-  const [activeLink, setActiveLink] = useState()
+  const [activeLink, setActiveLink] = useState();
 
   useEffect(() => {
     // to scroll screen into view based on the hash link
-    const refsCollection = [homeRef, aboutRef, projectsRef, educationRef, contactRef]
-    const idToScrollTo = window.location.hash?.split("#")[1] ?? "home"
+    const refsCollection = [homeRef, aboutRef, projectsRef, educationRef, contactRef];
+    const idToScrollTo = window.location.hash?.split("#")[1] ?? "home";
 
-    const requestedSectionRef = refsCollection.filter((eachRef) => eachRef.current?.id === idToScrollTo)[0]
+    const requestedSectionRef = refsCollection.filter((eachRef) => eachRef.current?.id === idToScrollTo)[0];
 
-    if (requestedSectionRef) requestedSectionRef.current.scrollIntoView({ behavior: "smooth" })
+    if (requestedSectionRef) requestedSectionRef.current.scrollIntoView({ behavior: "smooth" });
 
     // handle active link change based on scroll
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveLink(`#${entry.target.id}`)
+            setActiveLink(`#${entry.target.id}`);
           }
-        })
+        });
       },
       { threshold: 1 }
-    )
+    );
 
     refsCollection.forEach((eachRef) => {
-      observer.observe(eachRef.current)
-    })
-  }, [])
+      observer.observe(eachRef.current);
+    });
+  }, []);
 
   return (
     <>
@@ -58,8 +58,8 @@ export default function Home() {
               icon={faXmark}
               className="fa-fw text-3xl p-2"
               onClick={() => {
-                wholeSidebarRef.current?.classList.remove("block")
-                wholeSidebarRef.current?.classList.add("hidden")
+                wholeSidebarRef.current?.classList.remove("block");
+                wholeSidebarRef.current?.classList.add("hidden");
               }}
             />
           </div>
@@ -78,8 +78,8 @@ export default function Home() {
               icon={faBars}
               className="fa-fw text-3xl p-2 bg-gray-50/50 rounded-md"
               onClick={() => {
-                wholeSidebarRef.current?.classList.remove("hidden")
-                wholeSidebarRef.current?.classList.add("block")
+                wholeSidebarRef.current?.classList.remove("hidden");
+                wholeSidebarRef.current?.classList.add("block");
               }}
             />
           </div>
@@ -96,5 +96,5 @@ export default function Home() {
         </section>
       </main>
     </>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import React from "react"
-import ShowProjects from "../ProjectBox/ShowProjects"
+import React from "react";
+import ShowProjects from "../project-box/show-projects";
 
 export default function ProjectsSection({ providedRef }) {
   const projectsFrontend = [
@@ -45,7 +45,7 @@ export default function ProjectsSection({ providedRef }) {
       imageUrl: "/project-images/three-step-form.png",
       librariesUsed: ["Vanilla JavaScript"],
     },
-  ]
+  ];
 
   const projectsBackend = [
     {
@@ -54,7 +54,7 @@ export default function ProjectsSection({ providedRef }) {
       imageUrl: "/project-images/event-mgmt-back.png",
       librariesUsed: ["Express.js", "MongoDB", "JsonWebToken"],
     },
-  ]
+  ];
 
   return (
     <div
@@ -75,5 +75,5 @@ export default function ProjectsSection({ providedRef }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,28 +1,76 @@
-import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons"
-import { faDatabase } from "@fortawesome/free-solid-svg-icons"
-import Image from "next/image"
-import ExpertiseBox from "../ExpertiseBox/ExpertiseBox"
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+import ExpertiseBox from "../expertise-box/expertise-box";
 
 export default function AboutSection({ providedRef }) {
   const expertise = [
     {
       name: "React",
-      element: <FontAwesomeIcon icon={faReact} className="text-4xl text-[#61dbfb] fa-fw" />,
+      element: (
+        <FontAwesomeIcon
+          icon={faReact}
+          className="text-4xl text-[#61dbfb] fa-fw"
+        />
+      ),
     },
     {
       name: "Next.js",
-      element: <Image src="/next.js.svg" fill={true} alt="next.js-svg" />,
+      element: (
+        <Image
+          src="/next.js.svg"
+          fill={true}
+          alt="next.js-svg"
+        />
+      ),
     },
-    { name: "Node", element: <FontAwesomeIcon icon={faNodeJs} className="text-4xl fa-fw text-[#3c873a]" /> },
-    { name: "Express", element: <Image src="/express.js.svg" fill={true} alt="express.js-svg" /> },
-    { name: "MongoDB", element: <Image src="/mongodb.svg" fill={true} alt="mongodb-svg" /> },
-    { name: "SQL", element: <FontAwesomeIcon icon={faDatabase} className="text-4xl fa-fw text-[#1b667e]" /> },
-  ]
+    {
+      name: "Node",
+      element: (
+        <FontAwesomeIcon
+          icon={faNodeJs}
+          className="text-4xl fa-fw text-[#3c873a]"
+        />
+      ),
+    },
+    {
+      name: "Express",
+      element: (
+        <Image
+          src="/express.js.svg"
+          fill={true}
+          alt="express.js-svg"
+        />
+      ),
+    },
+    {
+      name: "MongoDB",
+      element: (
+        <Image
+          src="/mongodb.svg"
+          fill={true}
+          alt="mongodb-svg"
+        />
+      ),
+    },
+    {
+      name: "SQL",
+      element: (
+        <FontAwesomeIcon
+          icon={faDatabase}
+          className="text-4xl fa-fw text-[#1b667e]"
+        />
+      ),
+    },
+  ];
 
   return (
-    <div id="about" ref={providedRef}>
+    <div
+      id="about"
+      ref={providedRef}
+    >
       <div className="container">
         <div className="px-4 py-8 space-y-4">
           <div>
@@ -52,7 +100,11 @@ export default function AboutSection({ providedRef }) {
 
               <div className="grid grid-cols-3 gap-2">
                 {expertise.map((eachExpertise, idx) => (
-                  <ExpertiseBox key={idx} name={eachExpertise.name} element={eachExpertise.element} />
+                  <ExpertiseBox
+                    key={idx}
+                    name={eachExpertise.name}
+                    element={eachExpertise.element}
+                  />
                 ))}
               </div>
             </div>
@@ -60,5 +112,5 @@ export default function AboutSection({ providedRef }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

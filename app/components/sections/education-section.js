@@ -1,5 +1,5 @@
-import React from "react"
-import Timeline from "../Timeline/Timeline"
+import React from "react";
+import Timeline from "../timeline/timeline";
 
 export default function EducationSection({ providedRef }) {
   const academicInfo = [
@@ -13,10 +13,13 @@ export default function EducationSection({ providedRef }) {
       stream: "Computer Science, Mathematics",
       board: "HSEB, Nepal",
     },
-  ]
+  ];
 
   return (
-    <div id="education" ref={providedRef}>
+    <div
+      id="education"
+      ref={providedRef}
+    >
       <div className="container">
         <div className="py-8 px-4 space-y-8">
           <div>
@@ -29,5 +32,5 @@ export default function EducationSection({ providedRef }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

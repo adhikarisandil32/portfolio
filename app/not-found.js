@@ -1,6 +1,6 @@
-import React from "react"
-import Link from "next/link"
-import SidebarWithoutMenu from "./components/SidebarWithoutMenu"
+import React from "react";
+import Link from "next/link";
+import SidebarWithoutMenu from "./components/sidebar-without-menu";
 
 export default function NotFound() {
   return (
@@ -18,12 +18,15 @@ export default function NotFound() {
 
           <div className="text-center text-base">
             Go To{" "}
-            <Link href="/" className="font-semibold underline">
+            <Link
+              href="/"
+              className="font-semibold underline"
+            >
               Home
             </Link>
           </div>
         </section>
       </main>
     </>
-  )
+  );
 }

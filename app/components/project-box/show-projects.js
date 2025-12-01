@@ -1,10 +1,8 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import ProjectBox from "./ProjectBox"
-import Button from "../buttons/Button"
-import { twMerge as tw } from "tailwind-merge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import React from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ProjectBox from "./project-box";
 
 export default function ShowProjects({ frontendProjects, backendProjects }) {
   return (
@@ -30,27 +28,45 @@ export default function ShowProjects({ frontendProjects, backendProjects }) {
 
       <Tabs defaultValue="frontend">
         <TabsList className="mx-auto w-fit">
-          <TabsTrigger value="frontend" className="tracking-wider">
+          <TabsTrigger
+            value="frontend"
+            className="tracking-wider"
+          >
             FRONTEND
           </TabsTrigger>
 
-          <TabsTrigger value="backend" className="tracking-wider">
+          <TabsTrigger
+            value="backend"
+            className="tracking-wider"
+          >
             BACKEND
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="frontend" className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <TabsContent
+          value="frontend"
+          className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        >
           {frontendProjects.map((project, idx) => (
-            <ProjectBox key={idx} projectInfo={project} />
+            <ProjectBox
+              key={idx}
+              projectInfo={project}
+            />
           ))}
         </TabsContent>
 
-        <TabsContent value="backend" className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <TabsContent
+          value="backend"
+          className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        >
           {backendProjects.map((project, idx) => (
-            <ProjectBox key={idx} projectInfo={project} />
+            <ProjectBox
+              key={idx}
+              projectInfo={project}
+            />
           ))}
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }
