@@ -29,7 +29,7 @@ export default function Sidebar({ activeLink, wholeSidebarRef }) {
         />
 
         <div className="text-center">
-          <span>© Copyright 2024. All rights reserved.</span>
+          <span>© Copyright {new Date().getFullYear()}. All rights reserved.</span>
         </div>
       </div>
     </div>
